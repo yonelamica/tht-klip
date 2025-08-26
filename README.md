@@ -1,4 +1,4 @@
- Finance Tracker
+
 
 A Django-based web application for managing customer accounts, transactions, and financial data.
 
@@ -8,7 +8,7 @@ A Django-based web application for managing customer accounts, transactions, and
 - Transaction Processing: Record debits and credits with automatic balance calculations
 - Customer Enquiries: View transaction histories and generate customer reports
 - Data Filtering: Filter transactions by date, type, and customer
-- Bulk Operations: Process multiple transactions at once (optional)
+
 
 ## Tech Stack
 
@@ -28,7 +28,7 @@ A Django-based web application for managing customer accounts, transactions, and
 2. Set up virtual environment:
    
    python -m venv env
-   source env/bin/activate  # Windows: env\Scripts\activate
+ Activate your veirtual env by running: env\Scripts\activate
    
 
 3. Install dependencies:
