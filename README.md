@@ -47,7 +47,12 @@ A Django-based web application for managing customer accounts, transactions, and
    python manage.py runserver
    
 
-Open http://127.0.0.1:8000 in your browser.
+Open http://127.0.0.1:8000 in your browser, which will take you to a login/signup page
+# Once you've signed and logged in you can then click the Add  icon to add transactions 
+# The first custome field is for customers that already exist, so that the usercan be able to select, and the 2nd customer field field is for adding new customers
+<img width="1058" height="712" alt="image" src="https://github.com/user-attachments/assets/b4c235aa-88ab-4593-b55d-dbb5c301a5b3" />
+
+
 
 ### Recording Transactions
 Use the transactions module to record debits and credits. All transactions update customer balances in real-time. You can filter by date range or transaction type.
