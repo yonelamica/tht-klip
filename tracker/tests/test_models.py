@@ -21,7 +21,7 @@ def test_queryset_get_debit_method(transactions):
 @pytest.mark.django_db
 def test_queryset_get_total_credit_method(transactions):
     total_credits = Transaction.objects.get_total_credits()
-    assert total_income == sum(t.amount for t in transactions if t.type == 'credit')
+    assert account_balance == sum(t.amount for t in transactions if t.type == 'credit')
 
 @pytest.mark.django_db
 def test_queryset_get_total_debit_method(transactions):

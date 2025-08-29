@@ -8,7 +8,6 @@ from tracker.filters import TransactionFilter
 from tracker.forms import TransactionForm
 from django_htmx.http import retarget
 from tracker.charting import plot_income_debits_bar_chart, plot_customer_pie_chart
-#from tracker.charting import plot_income_expenses_bar_chart, plot_category_pie_chart
 from tracker.resources import TransactionResource
 from django.http import HttpResponse
 from tablib import Dataset
@@ -111,7 +110,7 @@ def get_transactions(request):
         context
     )
 
-
+@login_required
 def transaction_charts(request):
     transaction_filter = TransactionFilter(
         request.GET,

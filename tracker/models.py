@@ -5,9 +5,9 @@ from .managers import TransactionQuerySet
 class User(AbstractUser):
     pass
 
-# crated a clall called customer with name and balance
+# created class called customer with account, name and balance
 class Customer(models.Model):
-    #ccount = models.CharField('Account')
+    account = models.CharField(max_length=15, unique=True) 
     name = models.CharField(max_length=50, unique=True)
     balance = models.DecimalField(default=0, max_digits=12, decimal_places=2)
 
@@ -25,10 +25,11 @@ class Transaction(models.Model):
     )
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    customer = models.CharField(max_length=20)
+    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     type = models.CharField(max_length=7, choices=TRANSACTION_TYPE_CHOICES)
     amount = models.DecimalField(max_digits=10, decimal_places=2)
     account = models.CharField('Account', max_length=15, unique=True)
+    balance = models.DecimalField(default=0, max_digits=12, decimal_places=2)
     date = models.DateField()
 
     objects = TransactionQuerySet.as_manager()
