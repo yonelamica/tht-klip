@@ -27,7 +27,7 @@ A Django-based web application for managing customer accounts, transactions, and
 
 2. Set up virtual environment:
    
-   python -m venv env
+   To create a virtual envormnent run "python -m venv env"
  Activate your veirtual env by running: env\Scripts\activate
    
 
@@ -48,11 +48,6 @@ A Django-based web application for managing customer accounts, transactions, and
    
 
 Open http://127.0.0.1:8000 in your browser.
-
-## Usage
-
-### Managing Customers
-Navigate to the Customer Amendments section to add new customers or modify existing ones. Each customer gets a unique account number automatically.
 
 ### Recording Transactions
 Use the transactions module to record debits and credits. All transactions update customer balances in real-time. You can filter by date range or transaction type.
